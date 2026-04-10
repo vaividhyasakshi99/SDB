@@ -404,6 +404,47 @@
 .cta-card-slide h2 {
     overflow-wrap: break-word;
 }
+/* GLASS FLOATING BUTTONS */
+.glass-float-btn {
+    width: 66px;
+    height: 58px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.92);
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.28);
+background: rgba(40, 40, 40, 0.55);  /* dark grey + opacity */
+backdrop-filter: none;
+-webkit-backdrop-filter: none;
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.14);
+    transition: all 0.28s ease;
+}
+
+.glass-float-btn:hover {
+    transform: translateX(-4px);
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
+}
+
+.glass-float-btn i {
+    line-height: 1;
+}
+
+@media (max-width: 767px) {
+    .glass-float-btn {
+        width: 82px;
+        height: 52px;
+        border-radius: 10px;
+    }
+
+    .glass-float-btn i {
+        font-size: 24px !important;
+    }
+}
     </style>
 </head>
 <!-- LEFT RED SOCIAL BAR -->
@@ -542,10 +583,10 @@
             <!-- Card 1 -->
             <div class="bg-white px-12 py-9 flex flex-col items-center justify-center min-h-[160px]">
                 <img src="assets/images/interior.png" alt="Interior Icon" class="h-[60px] mb-4 opacity-70">
-<span class="font-serif-chic text-[32px] leading-[1.2] text-[#6a6763] font-medium">
+<span class="font-serif-chic text-[42px] md:text-[48px] leading-[1.1] text-[#6a6763] font-medium">
     interior
 </span>
-<span class="font-sans text-[13px] leading-[1.4] tracking-[0.55em] font-light text-[#8c8882] uppercase mt-2">
+<span class="font-sans text-[16px] md:text-[18px] leading-[1.4] tracking-[0.45em] font-medium text-[#8c8882] uppercase mt-2">
     designing
 </span>
             </div>
@@ -553,10 +594,11 @@
             <!-- Card 2 -->
             <div class="bg-white px-12 py-9 flex flex-col items-center justify-center min-h-[160px]">
                 <img src="assets/images/vastu.png" alt="Vastu Icon" class="h-[60px] mb-4 opacity-70">
-<span class="font-serif-chic text-[32px] leading-[1.2] text-[#6a6763] font-medium">
+<!-- VASTU -->
+<span class="font-serif-chic text-[42px] md:text-[48px] leading-[1.1] text-[#6a6763] font-medium">
     vastu
 </span>
-<span class="font-sans text-[13px] leading-[1.4] tracking-[0.55em] font-light text-[#8c8882] uppercase mt-2">
+<span class="font-sans text-[16px] md:text-[18px] leading-[1.4] tracking-[0.45em] font-medium text-[#8c8882] uppercase mt-2">
     consultancy
 </span>
             </div>
@@ -805,7 +847,7 @@
         </main>
 
         <!-- Footer -->
-<footer id="clients" class="w-full bg-[#151515] relative py-12 z-10 border-t border-gray-800 overflow-hidden">
+<footer id="clients" class="w-full bg-[#151515] relative pt-6 pb-2 z-10 border-t border-gray-800 overflow-hidden">
     
     <!-- Top Horizontal Line -->
     <!-- <div class="footer-line absolute top-5 left-10 lg:left-24 right-10 lg:right-24 h-[2px] bg-[#cfa63a]"></div> -->
@@ -813,13 +855,13 @@
     <div class="max-w-7xl mx-auto px-6 lg:px-12 relative">
         
         <!-- Vertical Divider Lines -->
-       <div class="footer-line-vertical hidden md:block absolute top-[38px] bottom-[70px] left-[28%] w-px bg-[#cfa63a]"></div>
-<div class="footer-line-vertical hidden md:block absolute top-[38px] bottom-[70px] right-[28%] w-px bg-[#cfa63a]"></div>
+       <div class="footer-line-vertical hidden md:block absolute top-[38px] bottom-[118px] left-[28%] w-px bg-[#cfa63a]"></div>
+<div class="footer-line-vertical hidden md:block absolute top-[38px] bottom-[118px] right-[28%] w-px bg-[#cfa63a]"></div>
         <!-- Main Footer Grid -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-12 relative z-10">
 
             <!-- Left Column -->
-            <div class="flex flex-col justify-start pt-8 pb-16 md:pb-0 pl-0 md:pl-10">
+            <div class="flex flex-col justify-start pt-12 pb-16 md:pb-0 pl-0 md:pl-10">
 <nav class="flex flex-col gap-6 text-xs font-sans font-bold tracking-widest uppercase text-white">
     <a href="#home" class="footer-drop footer-delay-1 hover:text-customGold transition-colors duration-300">home</a>
     <a href="#about" class="footer-drop footer-delay-2 hover:text-customGold transition-colors duration-300">about us</a>
@@ -830,7 +872,7 @@
             </div>
 
             <!-- Center Column -->
-            <div id="contact" class="flex flex-col items-center justify-center text-center py-8 px-4">
+            <div id="contact" class="flex flex-col items-center text-center pt-8 pb-[118px] px-4 h-full">
                 <h4 class="text-customGold font-sans font-bold text-s uppercase tracking-[0.3em] mb-8">
                     RECENT WORKS
                 </h4>
@@ -844,7 +886,7 @@
     <img src="assets/images/16.jpg" class="w-full h-20 object-cover" alt="Recent work 6">
 </div>
 
-<div class="flex flex-col items-center text-center mt-4">
+<div class="flex flex-col items-center text-center mt-auto pt-8">
 
   <!-- Heading -->
   <h4 class="text-white text-[12px] tracking-[0.35em] uppercase mb-4">
@@ -865,8 +907,8 @@
             </div>
 
             <!-- Right Column -->
-            <div class="flex flex-col items-end md:items-center justify-start pt-8 pb-16 md:pb-0 pr-0 md:pr-10">
-    <div class="flex md:flex-col items-center gap-4 md:gap-3 md:pt-0">
+            <div class="flex flex-col items-end md:items-center justify-end pt-8 pb-16 md:pb-[118px] pr-0 md:pr-10 h-full">
+    <div class="flex md:flex-col items-center gap-4 md:gap-3 md:pt-0 mt-auto">
 
         <div class="footer-drop footer-delay-1 mb-0 md:mb-6">
             <span class="text-white font-sans font-bold text-[8px] tracking-[0.3em] uppercase md:rotate-90 md:origin-center whitespace-nowrap inline-block">
@@ -897,14 +939,28 @@
     </div>
 
     <!-- Bottom Horizontal Line -->
-    <div class="footer-line absolute bottom-16 left-10 lg:left-24 right-10 lg:right-24 mb-4 h-px bg-[#cfa63a]"></div>
+    <div class="footer-line absolute bottom-16 left-10 lg:left-24 right-10 lg:right-24 mb-12 h-px bg-[#cfa63a]"></div>
 
     <!-- Footer Bottom Bar -->
-    <div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row justify-between items-center text-[10px] text-gray-400 font-sans tracking-widest uppercase mt-4 relative z-10">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 mb-8 flex flex-col md:flex-row justify-between items-center text-[10px] text-gray-400 font-sans tracking-widest uppercase mt-4 relative z-10">
         <p>PRIVACY POLICY</p>
         <p>&copy; SPACEDECORBELLE ALL RIGHTS RESERVED</p>
     </div>
 </footer>
+<!-- RIGHT SIDE GLASS ACTION BUTTONS -->
+<div class="fixed right-4 top-1/2 -translate-y-1/2 z-50 hidden md:flex flex-col gap-5">
+  
+  <!-- Form -->
+  <a href="#contactForm" class="glass-float-btn" aria-label="Fill Form">
+    <i class="ph ph-note-pencil text-[28px]"></i>
+  </a>
+
+  <!-- WhatsApp -->
+  <a href="https://wa.me/919654232327" target="_blank" class="glass-float-btn" aria-label="WhatsApp">
+    <i class="ph ph-whatsapp-logo text-[28px]"></i>
+  </a>
+
+</div>
     </div>
 
     <script>
