@@ -257,13 +257,8 @@
     opacity: 0;
     transform: translateY(-18px);
     animation: navDropIn 0.5s ease forwards;
+    animation-delay: var(--delay, 0s);
 }
-
-.nav-drop:nth-child(1) { animation-delay: 0.56s; }
-.nav-drop:nth-child(2) { animation-delay: 0.68s; }
-.nav-drop:nth-child(3) { animation-delay: 0.80s; }
-.nav-drop:nth-child(4) { animation-delay: 0.92s; }
-.nav-drop:nth-child(5) { animation-delay: 1.04s; }
 
 /* MOBILE MENU BUTTON */
 .mobile-menu-drop {
@@ -489,13 +484,13 @@
 
         <!-- Navigation -->
 <nav class="hidden md:flex gap-7 text-sm font-medium text-gray-700 tracking-widest">
-    <a href="#home" class="nav-link nav-drop flex items-center gap-1">home <i class="ph ph-caret-down"></i></a>
-    <a href="#about" class="nav-link nav-drop flex items-center gap-1">about us <i class="ph ph-caret-down"></i></a>
-    <a href="#interior" class="nav-link nav-drop flex items-center gap-1">interior <i class="ph ph-caret-down"></i></a>
-    <a href="#vastu" class="nav-link nav-drop flex items-center gap-1">vastu <i class="ph ph-caret-down"></i></a>
-    <a href="#decor" class="nav-link nav-drop flex items-center gap-1">decor <i class="ph ph-caret-down"></i></a>
-    <a href="#portfolio" class="nav-link nav-drop flex items-center gap-1">portfolio <i class="ph ph-caret-down"></i></a>
-    <a href="#contact" class="nav-link nav-drop flex items-center gap-1">contact <i class="ph ph-caret-down"></i></a>
+    <a href="#home" class="nav-link nav-drop" style="--delay: 0.56s;">home</a>
+    <a href="#about" class="nav-link nav-drop" style="--delay: 0.68s;">about us</a>
+    <a href="#interior" class="nav-link nav-drop" style="--delay: 0.80s;">interior</a>
+    <a href="#vastu" class="nav-link nav-drop" style="--delay: 0.92s;">vastu</a>
+    <a href="#decor" class="nav-link nav-drop" style="--delay: 1.04s;">decor</a>
+    <a href="#portfolio" class="nav-link nav-drop" style="--delay: 1.16s;">portfolio</a>
+    <a href="#contact" class="nav-link nav-drop" style="--delay: 1.28s;">contact</a>
 </nav>
         <!-- Mobile Menu Button -->
 <button id="menuBtn" class="md:hidden text-2xl text-[#1a1a1a] mobile-menu-drop" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu" type="button">
